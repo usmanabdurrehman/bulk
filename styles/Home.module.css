@@ -1,0 +1,223 @@
+.heroWrapper{
+  margin: 30px 0;
+  height:500px;
+  background: url('./home-wallpaper1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.orderHere{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #61FF7E;
+  border-radius: 40px;
+  padding:10px;
+  border:none;
+  cursor: pointer;
+  transition:0.3s;
+  width:120px;
+}
+
+.orderHere:hover{
+  width:150px;
+}
+
+.orderHere .arrowIcon{
+  margin-left: 5px;
+}
+
+.verticalAlignCenter{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about{
+  margin:50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.aboutWrapper{
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px lightgray;
+  background-color: white;
+  padding:20px;
+}
+
+.centerText{
+  text-align: center;
+  margin:0;
+}
+
+.ourServices{
+  margin:50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ourServicesWrapper{
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-top: 15px;
+}
+
+.ourServicesWrapper>div{
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px lightgray;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius:20px 0 20px 0;
+  padding:20px;
+  position: relative;
+}
+
+.ourServicesWrapper img{
+  width:100%;
+}
+
+.deliveredOrders{
+  margin:50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.deliveredOrdersWrapper{
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  grid-gap: 25px;
+  margin-top: 15px;
+}
+
+.deliveredOrdersWrapper>div{
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px lightgray;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius:20px 0 20px 0;
+  overflow: hidden;
+}
+
+.deliveredOrdersWrapper>div>img{
+  width:100%;
+  height: 100%;
+  border-radius:20px 0 20px 0;
+  transition:0.4s;
+}
+
+.deliveredOrdersWrapper>div>img:hover{
+  transform: scale(1.2);
+}
+
+.testimonials{
+  margin:50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.testimonialsWrapper{
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-top: 15px;
+}
+
+.testimonialsWrapper>div{
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px lightgray;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius:20px 0 20px 0;
+  overflow: hidden;
+  padding:20px;
+  transition:0.3s;
+  position: relative;
+}
+
+.hoverLineTop{
+  position: absolute;
+  top:0;
+  left:0;
+  width:0%;
+  transition: 0.3s;
+  background-color: #61FF7E;
+  height:4px;
+}
+
+.hoverLineBottom{
+  position: absolute;
+  bottom:0;
+  right:0;
+  width:0%;
+  transition: 0.3s;
+  background-color: #61FF7E;
+  height:4px;
+}
+
+.testimonialsWrapper>div:hover .hoverLineTop{
+  width:100%;
+}
+
+.testimonialsWrapper>div:hover .hoverLineBottom{
+   width:100%;
+}
+
+.ourServicesWrapper>div:hover .hoverLineTop{
+  width:100%;
+}
+.ourServicesWrapper>div:hover .hoverLineBottom{
+  width:100%;
+}
+
+.brandsWorkedWith{
+  margin:50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.brandsWorkedWithWrapper{
+  width:100%;
+  margin-top: 15px;
+  background:url('./brands-background.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height:200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:30px 0;
+}
+
+.brandsWorkedWithGrid{
+  width:80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-gap: 25px;
+}
+
+.brandsWorkedWithGrid>div>img{
+  height:100%;
+  width:100%;
+}

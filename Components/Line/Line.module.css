@@ -1,0 +1,12 @@
+.line{
+  height: 4px;
+  background: #61FF7E;
+  border-radius: 1px;
+  width:200px;
+}
+
+.lineWrapper{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}

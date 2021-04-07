@@ -1,0 +1,45 @@
+.navbar{
+	background: #61FF7E;
+	height: 70px;
+	font-size: 14px;
+	color: #3AE637;
+	position: relative;
+}
+
+.navbar .navWrapper{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .nav{
+	display: flex;
+}
+
+.navbar .nav>div{
+	cursor: pointer;
+}
+
+.navbar .nav>div>a{
+	display: flex;
+	align-items: center;
+}
+
+.navbar .nav>div>a>p{
+	margin-left:5px;
+}
+
+.navbar .nav>div+div{
+	margin-left:30px;
+}
+
+.navbar .logout{
+	cursor: pointer;
+}
+
+.navbar p{
+	text-decoration: none;
+	color:#3AE637;
+	font-weight: bold;
+}
