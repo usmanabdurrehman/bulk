@@ -21,17 +21,10 @@ export default function Order() {
 			<Container>
 			<div className={styles.completedOrders}>
 				<div className={styles.capCategory}>
-					<div><img src="/bulk bays orders/IMG-1856.jpg"/></div>
-					<div><img src="/bulk bays orders/IMG-1857.jpg"/></div>
-					{/* <div><img src="/bulk bays orders/IMG-1859.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1860.jpg"/></div> */}
 					<div><img src="/bulk bays orders/IMG-1863.jpg"/></div>
-					{/* <div><img src="/bulk bays orders/IMG-1867.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1868.jpg"/></div> */}
+					<div><img src="/bulk bays orders/IMG-1859.jpg"/></div>
+					<div><img src="/bulk bays orders/IMG-1860.jpg"/></div>
 					<div><img src="/bulk bays orders/IMG-1866.jpg"/></div>
-					{/* <div><img src="/bulk bays orders/IMG-1869.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1870.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1892.jpg"/></div> */}
 					<div className={styles.hoverCover}>
 						<h1>P-Caps</h1>
 					</div>
@@ -41,13 +34,6 @@ export default function Order() {
 					<div><img src="/bulk bays orders/IMG-1893.jpg"/></div>
 					<div><img src="/bulk bays orders/IMG-1896.jpg"/></div>
 					<div><img src="/bulk bays orders/IMG-1898.jpg"/></div>
-					{/* <div><img src="/bulk bays orders/IMG-1899.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1905.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1868.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1866.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1869.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1870.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1892.jpg"/></div> */}
 					<div className={styles.hoverCover}>
 						<h1>Metal Crafts</h1>
 					</div>
@@ -57,13 +43,6 @@ export default function Order() {
 					<div><img src="/bulk bays orders/IMG-1901.jpg"/></div>
 					<div><img src="/bulk bays orders/IMG-1902.jpg"/></div>
 					<div><img src="/bulk bays orders/IMG-1903.jpg"/></div>
-					{/* <div><img src="/bulk bays orders/CEFEE046-4DD9-4F82-95F2-3C468E53DCA8.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1854.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1868.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1866.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1869.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1870.jpg"/></div> */}
-					{/* <div><img src="/bulk bays orders/IMG-1892.jpg"/></div> */}
 					<div className={styles.hoverCover}>
 						<h1>Shirts</h1>
 					</div>
@@ -87,9 +66,7 @@ export default function Order() {
 				</div>
 				<div className={styles.jerseyCategory}>
 					<div><img src="/bulk bays orders/CEFEE046-4DD9-4F82-95F2-3C468E53DCA8.jpeg"/></div>
-					<div><img src="/bulk bays orders/74572627-B551-4BE1-A1AA-364510115096.jpeg"/></div>
-					<div><img src="/bulk bays orders/IMG-1861.jpg"/></div>
-					<div><img src="/bulk bays orders/IMG-1897.jpg"/></div>
+					<div><img src="/bulk bays orders/1DE3000E-F086-4E14-8508-F1722DAFC12F.jpeg"/></div>
 					<div className={styles.hoverCover}>
 						<h1>Jersey Pullover</h1>
 					</div>
@@ -115,6 +92,8 @@ export default function Order() {
 				<div className={styles.sportsKitsCategory}>
 					<div><img src="/bulk bays orders/IMG-1854.jpg"/></div>
 					<div><img src="/bulk bays orders/IMG-1855.jpg"/></div>
+					<div><img src="/bulk bays orders/IMG-1856.jpg"/></div>
+					<div><img src="/bulk bays orders/IMG-1857.jpg"/></div>
 					<div className={styles.hoverCover}>
 						<h1>Sports Kits</h1>
 					</div>

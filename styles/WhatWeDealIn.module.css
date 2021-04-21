@@ -1,8 +1,8 @@
 .completedOrders{
 	margin:50px 0;
 	display: grid;
-	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-	/* grid-template-rows: 500px; */
+	grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+	grid-auto-rows: minmax(350px,500px);
 	grid-gap:50px;
 	position: relative;
 }
@@ -62,6 +62,31 @@
 	color: white;
 }
 
+.completedOrders>div:nth-child(6) .hoverCover{
+	background:pink;
+	color: white;
+}
+
+.completedOrders>div:nth-child(7) .hoverCover{
+	background:cyan;
+	color: white;
+}
+
+.completedOrders>div:nth-child(8) .hoverCover{
+	background:yellow;
+	color: white;
+}
+
+.completedOrders>div:nth-child(9) .hoverCover{
+	background:green;
+	color: white;
+}
+
+.completedOrders>div:nth-child(10) .hoverCover{
+	background:gray;
+	color: white;
+}
+
 .completedOrders>div>div{
 	overflow: hidden;
 }
@@ -84,6 +109,26 @@
 
 .completedOrders>div:nth-child(5){
 	border-left:5px solid purple;
+}
+
+.completedOrders>div:nth-child(6){
+	border-left:5px solid pink;
+}
+
+.completedOrders>div:nth-child(7){
+	border-left:5px solid cyan;
+}
+
+.completedOrders>div:nth-child(8){
+	border-left:5px solid yellow;
+}
+
+.completedOrders>div:nth-child(9){
+	border-left:5px solid green;
+}
+
+.completedOrders>div:nth-child(10){
+	border-left:5px solid gray;
 }
 
 .completedOrders>div>div:nth-child(2){

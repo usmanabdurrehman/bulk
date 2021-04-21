@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Container, Line, FlipCard } from "../Components";
@@ -8,6 +9,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 export default function Home() {
+
 	return (
 		<Layout
 			home
