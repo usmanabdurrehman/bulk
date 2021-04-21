@@ -45,7 +45,7 @@ export default function Order() {
 		formdata.append('phoneNo',phoneNo)
 
 		axios({
-			url: "http://localhost:3000/api/submitInfo",
+			url: "https://bulk.vercel.app/api/submitInfo",
 			method: "post",
 			withCredentials: true,
 			data: formdata,

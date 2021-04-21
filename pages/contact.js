@@ -29,7 +29,7 @@ export default function Contact() {
 			description,
 		} = fields;
 		axios({
-			url: "http://localhost:3000/api/contact",
+			url: "https://bulk.vercel.app/api/contact",
 			method: "post",
 			withCredentials: true,
 			data: fields,
