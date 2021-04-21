@@ -1,14 +1,19 @@
-.contact{
+.contactForm{
 	border-radius: 10px;
 	box-shadow: 3px 3px 7px lightgray;
 	transition: 0.6s;
 	background-color: white;
 	display: grid;
 	grid-template-columns: 5fr 3fr;
+	margin:50px 0;
 }
 
 .formInput{
 	margin:10px 0 !important;
+}
+
+.submitBtn{
+	height:50px !important;
 }
 
 .submitBtn:disabled{
@@ -33,4 +38,24 @@
 	display: flex;
 	align-items: center;
 	/* justify-content: center; */
+}
+
+.heroWrapper{
+  height: 100vh;
+  background: url('./contact-wallpaper2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:black;
+}
+
+.heroContent{
+  width:50%;
+  color:black;
+}
+
+.verticalAlignCenter{
+  display: flex;
+  height: 100%;
+  align-items: center;
 }

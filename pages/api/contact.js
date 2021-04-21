@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 		from: "usmanselenbad@gmail.com",
 		to: email,
 		subject: "Your Query",
-		html: `	<h2> Your Query has been sent. We will contact you within 1 business day for the addressal.</h2>
+		html: `	<b> Your Query has been sent. We will contact you within 1 business day for the addressal.</b>
 				<b>Name: </b>${name}<br/>
 			   	<b>Email: </b>${email}<br/>
 			   	<b>Phone Number: </b>${phoneNo}<br/>

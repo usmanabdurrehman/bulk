@@ -1,0 +1,40 @@
+.card{	
+	border-radius: 10px;
+	box-shadow: 3px 3px 7px lightgray;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+	border-radius:20px 0 20px 0;
+	padding:20px;
+	position: relative;
+}	
+
+.hoverLineTop{
+  position: absolute;
+  top:0;
+  left:0;
+  width:0%;
+  transition: 0.3s;
+  background-color: #61FF7E;
+  height:4px;
+}
+
+.hoverLineBottom{
+  position: absolute;
+  bottom:0;
+  right:0;
+  width:0%;
+  transition: 0.3s;
+  background-color: #61FF7E;
+  height:4px;
+}
+
+.card:hover .hoverLineTop{
+  width:100%;
+}
+
+.cards:hover .hoverLineBottom{
+   width:100%;
+}

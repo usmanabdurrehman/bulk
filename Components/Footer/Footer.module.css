@@ -3,8 +3,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #61FF7E;
+	background: white;
 	font-size: 14px;
-	color: #3AE637;
 	font-weight: bold;
+	color: black;
+	border-top:2px solid black;
 }

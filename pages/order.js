@@ -3,6 +3,7 @@ import { SketchPicker } from "react-color";
 import { Layout } from "../Layouts";
 import styles from "../styles/Order.module.css";
 import { TextField, Button } from "@material-ui/core";
+import {Container} from '../Components'
 
 import axios from 'axios'
 
@@ -11,7 +12,7 @@ export default function Order() {
 	let [submitDisabled,setSubmitDisabled] = useState(true)
 
 	let [fields, setFields] = useState({
-		color: "#61FF7E",
+		color: "#0e305d",
 		description: "",
 		quantity: "",
 		image: "",
@@ -19,6 +20,7 @@ export default function Order() {
 		name: "",
 		email: "",
 		phoneNo: "",
+		address:""
 	});
 
 	let imageOnChange = (e) => {
@@ -30,7 +32,7 @@ export default function Order() {
 
 	let clickHandler = () => {
 
-		let {color,description,quantity,image,name,email,phoneNo} = fields
+		let {color,description,quantity,image,name,email,phoneNo,address} = fields
 
 		let formdata = new FormData()
 		formdata.append('color',color)
@@ -38,6 +40,7 @@ export default function Order() {
 		formdata.append('quantity',quantity)
 		formdata.append('image',image)
 		formdata.append('name',name)
+		formdata.append('address',address)
 		formdata.append('email',email)
 		formdata.append('phoneNo',phoneNo)
 
@@ -52,7 +55,7 @@ export default function Order() {
 	};
 
 	useEffect(() => {
-		if(fields.color && fields.description && fields.quantity && fields.image && fields.name && fields.email && fields.phoneNo){
+		if(fields.color && fields.description && fields.quantity && fields.image && fields.name && fields.address && fields.email){
 			setSubmitDisabled(false)
 		}
 		else{
@@ -61,7 +64,16 @@ export default function Order() {
 	}, [fields])
 
 	return (
-		<Layout container>
+		<Layout home isLight colorSchemeFooter={{backgroundColor:'#181713',color:'white',borderTop:'none'}}>
+			<div className={styles.heroWrapper}>
+				<Container className={styles.verticalAlignCenter}>
+					<div className={styles.heroContent}>
+						<h1>Place An Order</h1>
+						<p>We try to deliver as soon as possible</p>
+					</div>
+				</Container>
+			</div>
+			<Container>
 			<div className={styles.orderForm}>
 				<h1>Order Details</h1>
 				<div className={styles.formGrid}>
@@ -99,6 +111,7 @@ export default function Order() {
 								className={styles.formInput}
 								fullWidth
 								variant="outlined"
+								required
 							/>
 							<TextField
 								onChange={(e) =>
@@ -113,6 +126,7 @@ export default function Order() {
 								type="number"
 								fullWidth
 								variant="outlined"
+								required
 							/>
 						</div>
 					</div>
@@ -123,11 +137,10 @@ export default function Order() {
 								setFields({ ...fields, color: color.hex });
 							}}
 						/>
-						;
 					</div>
 				</div>
 				<h1>Personal Information</h1>
-				<div className={styles.formGrid}>
+				<div className={styles.personalInfoGrid}>
 					<TextField
 						onChange={(e) =>
 							setFields({
@@ -137,9 +150,22 @@ export default function Order() {
 						}
 						value={fields.name}
 						label="Name"
-						className={styles.formInput}
 						fullWidth
 						variant="outlined"
+						required
+					/>
+					<TextField
+						onChange={(e) =>
+							setFields({
+								...fields,
+								address: e.target.value,
+							})
+						}
+						value={fields.address}
+						label="Address"
+						fullWidth
+						variant="outlined"
+						required
 					/>
 					<TextField
 						onChange={(e) =>
@@ -150,9 +176,9 @@ export default function Order() {
 						}
 						value={fields.email}
 						label="Email"
-						className={styles.formInput}
 						fullWidth
 						variant="outlined"
+						required
 					/>
 					<TextField
 						onChange={(e) =>
@@ -163,7 +189,6 @@ export default function Order() {
 						}
 						value={fields.phoneNo}
 						label="Phone Number"
-						className={styles.formInput}
 						fullWidth
 						variant="outlined"
 					/>
@@ -177,6 +202,7 @@ export default function Order() {
 					Submit
 				</Button>
 			</div>
+			</Container>
 		</Layout>
 	);
 }

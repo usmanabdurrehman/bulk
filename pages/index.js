@@ -1,17 +1,35 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Container, Line } from "../Components";
+import { Container, Line, FlipCard } from "../Components";
 import { Layout } from "../Layouts";
-import Link from 'next/link'
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import Link from "next/link";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 export default function Home() {
 	return (
-		<Layout>
+		<Layout
+			home
+			colorSchemeFooter={{
+				backgroundColor: "#50111E",
+				color: "white",
+				borderTop: "none",
+			}}
+		>
 			<div className={styles.heroWrapper}>
 				<Container className={styles.verticalAlignCenter}>
-					<h1>Your all in one stop for ordering custom items</h1>
-					<Link href="/order"><button className={styles.orderHere}><p>Order here</p>  <ArrowForwardIosIcon className={styles.arrowIcon}/></button></Link>
+					<div className={styles.heroContent}>
+						<h1>Your all in one stop for ordering custom items</h1>
+						<Link href="/order">
+							<button className={styles.orderHere}>
+								<p>Order here</p>{" "}
+								<ArrowForwardIosIcon
+									className={styles.arrowIcon}
+								/>
+							</button>
+						</Link>
+					</div>
 				</Container>
 			</div>
 			<Container>
@@ -19,36 +37,76 @@ export default function Home() {
 					<h1 className={styles.centerText}>Our Services</h1>
 					<Line />
 					<div className={styles.ourServicesWrapper}>
-						<div>
-							<div className={styles.hoverLineTop}></div>
-							<div className={styles.hoverLineBottom}></div>
-							<img src="/services/custom order.jpg" />
-							<h2>Custom Products</h2>
-							<p>You can get customized products in Bulks</p>
-						</div>
-						<div>
-							<div className={styles.hoverLineTop}></div>
-							<div className={styles.hoverLineBottom}></div>
-							<img src="/services/fast delivery.jpg" />
-							<h2>Services</h2>
-							<p>
-								We provide excellent services for your Business
-								without any hassle
-							</p>
-						</div>
-						<div>
-							<div className={styles.hoverLineTop}></div>
-							<div className={styles.hoverLineBottom}></div>
-							<img src="/services/high quality.jpg" />
-							<h2>Quality products</h2>
-							<p>
-								Making sure that the customers are provided with
-								quality products{" "}
-							</p>
-						</div>
+						<FlipCard
+							image="/services/custom order.jpg"
+							header="Custom Products"
+							description="You can get customized products in Bulks"
+						/>
+						<FlipCard
+							image="/services/fast delivery.jpg"
+							header="Services"
+							description="We provide excellent services for your Business
+								without any hassle"
+						/>
+						<FlipCard
+							image="/services/high quality.jpg"
+							header="Quality products"
+							description="Making sure that the customers are provided with
+								quality products"
+						/>
 					</div>
 				</div>
-
+			</Container>
+			<div className={styles.counterSection}>
+				<Container className={styles.counterGrid}>
+					<div>
+						<h1>
+							<CountUp start={0} end={20} duration={3}>
+								{({ countUpRef, start }) => (
+									<VisibilitySensor
+										onChange={start}
+										delayedCall
+									>
+										<span ref={countUpRef} />
+									</VisibilitySensor>
+								)}
+							</CountUp>
+						</h1>{" "}
+						<p>Orders active</p>
+					</div>
+					<div>
+						<h1>
+							<CountUp start={0} end={203} duration={3}>
+								{({ countUpRef, start }) => (
+									<VisibilitySensor
+										onChange={start}
+										delayedCall
+									>
+										<span ref={countUpRef} />
+									</VisibilitySensor>
+								)}
+							</CountUp>
+						</h1>{" "}
+						<p>Orders delivered</p>
+					</div>
+					<div>
+						<h1>
+							<CountUp start={0} end={305} duration={3}>
+								{({ countUpRef, start }) => (
+									<VisibilitySensor
+										onChange={start}
+										delayedCall
+									>
+										<span ref={countUpRef} />
+									</VisibilitySensor>
+								)}
+							</CountUp>
+						</h1>{" "}
+						<p>Queries resolved</p>
+					</div>
+				</Container>
+			</div>
+			<Container>
 				<div className={styles.deliveredOrders}>
 					<h1 className={styles.centerText}>Delivered Orders</h1>
 					<Line />
@@ -88,67 +146,6 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-
-				<div className={styles.testimonials}>
-					<h1 className={styles.centerText}>
-						What My Client Have To Say
-					</h1>
-					<Line />
-					<div className={styles.testimonialsWrapper}>
-						<div>
-							<div className={styles.hoverLineTop}></div>
-							<div className={styles.hoverLineBottom}></div>
-							<p>
-								"Very good service. The quality of the products
-								was good and the packaging was outstanding.
-								Apart from that, the service was good as well."
-							</p>
-							<p>Adam Jerard, Designer</p>
-						</div>
-						<div>
-							<div className={styles.hoverLineTop}></div>
-							<div className={styles.hoverLineBottom}></div>
-							<p>
-								"I am a businessman and thats why I needs to
-								order products in bulk quantities. This was a
-								very hard task previously but it can be seen
-								that with the passage of time the work has
-								become easier through Bulkbays.com"
-							</p>
-							<p> Shahbaz Waseem Malik, Manager</p>
-						</div>
-						<div>
-							<div className={styles.hoverLineTop}></div>
-							<div className={styles.hoverLineBottom}></div>
-							<p>
-								"They have excellent customer service and it is
-								the customer service that makes them stand out
-								from the crowd. The quality of the products are
-								also far beyond expectations"
-							</p>
-							<p> Raja jazib Ali, Support</p>
-						</div>
-					</div>
-				</div>
-			</Container>
-
-			<div className={styles.brandsWorkedWith}>
-				<h1 className={styles.centerText}>Brands I Have Worked With</h1>
-				<Line />
-				<div className={styles.brandsWorkedWithWrapper}>
-					<div className={styles.brandsWorkedWithGrid}>
-						{[1, 2, 3, 4, 5, 6, 7].map((item) => (
-							<div>
-								<img
-									src={`/brands worked/${item}.png`}
-									alt=""
-								/>
-							</div>
-						))}
-					</div>
-				</div>
-			</div>
-			<Container>
 				<div className={styles.about}>
 					<div className={styles.aboutWrapper}>
 						<h1 className={styles.centerText}>About Me</h1>

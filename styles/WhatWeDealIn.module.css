@@ -1,0 +1,135 @@
+.completedOrders{
+	margin:50px 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	/* grid-template-rows: 500px; */
+	grid-gap:50px;
+	position: relative;
+}
+
+.completedOrders>div{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows:  repeat(2,1fr);
+	border-radius:0 20px 0 20px;
+	box-shadow: 3px 3px 7px lightgray;
+	overflow: hidden;
+	position: relative;
+}
+
+.completedOrders .hoverCover{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width:100%;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform:translateX(-100%);
+	transition: 0.4s;
+	transition-delay: 0.4s;
+	cursor: pointer;
+}
+
+.completedOrders>div:hover .hoverCover{
+	transform:translateX(0);
+}
+
+.completedOrders>div:nth-child(1) .hoverCover{
+	background:orange;
+	color: white;
+}
+
+.completedOrders>div:nth-child(2) .hoverCover{
+	background:blue;
+	color: white;
+}
+
+.completedOrders>div:nth-child(3) .hoverCover{
+	background:red;
+	color: white;
+}
+
+.completedOrders>div:nth-child(4) .hoverCover{
+	background:black;
+	color: white;
+}
+
+.completedOrders>div:nth-child(5) .hoverCover{
+	background:purple;
+	color: white;
+}
+
+.completedOrders>div>div{
+	overflow: hidden;
+}
+
+.completedOrders>div:nth-child(1){
+	border-left:5px solid orange;
+}
+
+.completedOrders>div:nth-child(2){
+	border-left:5px solid blue;
+}
+
+.completedOrders>div:nth-child(3){
+	border-left:5px solid red;
+}
+
+.completedOrders>div:nth-child(4){
+	border-left:5px solid black;
+}
+
+.completedOrders>div:nth-child(5){
+	border-left:5px solid purple;
+}
+
+.completedOrders>div>div:nth-child(2){
+	border-radius:0 20px 0 0;
+}
+
+.completedOrders>div>div:nth-child(3){
+	border-radius:0 0 0 20px;
+}
+
+.completedOrders>div>div:nth-child(2)>img{
+	border-radius:0 20px 0 0;
+}
+
+.completedOrders>div>div:nth-child(3)>img{
+	border-radius:0 0 0 20px;
+}
+
+.completedOrders>div>div>img{
+	width: 100%;
+	height:100%;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.completedOrders>div>div>img:hover{
+	transform: scale(1.2)
+}
+
+.heroWrapper{
+  height: 100vh;
+  background: url('./completed-orders-wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:black;
+}
+
+.heroContent{
+  width:50%;
+  color:black;
+}
+
+.verticalAlignCenter{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}

@@ -25,7 +25,7 @@ apiRoute.use(upload.any())
 
 apiRoute.post((req, res) => {
 
-	let { color, description, quantity, name, email, phoneNo } = req.body;
+	let { color, description, quantity, name, email, phoneNo,address } = req.body;
 
 	var transporter = nodemailer.createTransport({
 		service: "gmail",
@@ -48,6 +48,7 @@ apiRoute.post((req, res) => {
 
 			   	<h3> Profile Information</h3>
 				<b>Name: </b>${name}<br/>
+				<b>Address: </b>${address}<br/>
 			   	<b>Email: </b>${email}<br/>
 			   	<b>Phone Number: </b>${phoneNo}<br/>`,
 		attachments: [
@@ -72,6 +73,7 @@ apiRoute.post((req, res) => {
 
 			   	<h3> Profile Information</h3>
 				<b>Name: </b>${name}<br/>
+				<b>Address: </b>${address}<br/>
 			   	<b>Email: </b>${email}<br/>
 			   	<b>Phone Number: </b>${phoneNo}<br/>`,
 		attachments: [

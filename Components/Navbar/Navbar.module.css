@@ -1,9 +1,7 @@
 .navbar{
-	background: #61FF7E;
+	background: white;
 	height: 70px;
 	font-size: 14px;
-	color: #3AE637;
-	position: relative;
 }
 
 .navbar .navWrapper{
@@ -11,6 +9,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 .navbar .nav{
@@ -40,6 +39,21 @@
 
 .navbar p{
 	text-decoration: none;
-	color:#3AE637;
+	color:black;
 	font-weight: bold;
+}
+
+.navbar .lineWrapper{
+	bottom:0;
+	left:0;
+	position: absolute;
+  	padding:0 16px;
+	max-width: 1080px;
+	margin: auto;
+	width:100%;
+}
+
+.navbar .line{
+	height:2px; 
+	background-color: black;
 }

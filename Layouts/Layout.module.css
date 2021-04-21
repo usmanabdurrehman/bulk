@@ -2,9 +2,20 @@
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 .layoutContainer{
 	flex:1;
-	padding:30px 0;
+}
+
+.fab{
+	position: fixed !important;
+	bottom:20px;
+	right:20px;
+	background-color:rgb(220, 0, 78) !important;
+}
+
+.icon{
+	color:white;
 }

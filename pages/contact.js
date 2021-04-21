@@ -6,6 +6,8 @@ import styles from "../styles/Contact.module.css";
 import { TextField, Button, CircularProgress} from "@material-ui/core";
 import SendIcon from '@material-ui/icons/Send';
 
+import {Container} from '../Components'
+
 import axios from 'axios'
 
 export default function Contact() {
@@ -38,8 +40,17 @@ export default function Contact() {
 	};
 
 	return (
-		<Layout container>
-			<div className={styles.contact}>
+		<Layout home colorSchemeFooter={{backgroundColor:'#FDA94E',color:'black',borderTop:'none'}}>
+			<div className={styles.heroWrapper}>
+				<Container className={styles.verticalAlignCenter}>
+					<div className={styles.heroContent}>
+						<h1>Contact Us</h1>
+						<p>We reply within 24 business hours</p>
+					</div>
+				</Container>
+			</div>
+			<Container>
+			<div className={styles.contactForm}>
 				<div>
 					<img src="/ContactUs.png" alt="" className={styles.contactImage}/>
 				</div>
@@ -108,6 +119,7 @@ export default function Contact() {
 				</Button>
 			</div>
 			</div>
+			</Container>
 		</Layout>
 	);
 }
